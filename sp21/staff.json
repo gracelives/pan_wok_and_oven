@@ -1,0 +1,37 @@
+{
+    "Course Staff": [
+        {
+            "name": "Grace Li",
+            "email": "fqzbdkh@berkeley.edu",
+            "imgUrl": "assets/staff_pics/grace_profile.jpg",
+            "blurb": "Hi! I am a CS and stats double major. I’m from the general LA area, and this semester I also teach DATA8. Some things I enjoy include discovering good food, shibes, consumerism, and data science; guess which one is my favorite ;’) Looking forward to a great semester and e-meeting you all!"
+        },
+        {
+            "name": "Kyle Kishimoto",
+            "email": "kylek@berkeley.edu",
+            "imgUrl": "assets/staff_pics/kyle_profile.png",
+            "blurb": "Hi!  My name is Kyle, and I'm a sophomore majoring in math with a teaching concentration, and minoring in STEM education and data science.  I plan to pursue a career in teaching after graduation.  I'm excited to be teaching this course!"
+        },
+        {
+            "name": "Varun Mittal",
+            "email": "varunmittal@berkeley.edu",
+            "imgUrl": "assets/staff_pics/varun_profile.jpeg",
+            "blurb": "Hey everyone! I am a Junior studying Data Science and Economics. I’m from Sacramento and some of my favorite things are basketball, music, and food, so feel free to talk to me about any of those! Excited to meet everyone and have a great semester!"
+        }
+
+    ],
+    "Connector Assistants": [
+        {
+            "name": "Ashley Zhang",
+            "email": "xingyuzhang@berkeley.edu",
+            "imgUrl": "assets/staff_pics/ashley_profile.jpg",
+            "blurb": "Hi, my name is Ashley Zhang and I am a fourth year student studying Applied Math and Data Science. During this quarantine time, I like cooking and hiking with friends. Hope this course will provide some useful data science techniques in your future!"
+        },
+        {
+            "name": "Hongli Zhao",
+            "email": "honglizhaobob@berkeley.edu",
+            "imgUrl": "assets/staff_pics/bob_profile_pic.jpg",
+            "blurb": "Hi everyone! My name is Hongli (I go by Bob) and I am very excited to be helping out Data 198 this semester. I am an Applied Mathematics and Data Science double major. You may have seen me teaching at other EECS and Math classes as well, and I hope everyone will have an enjoyable semester with us (as I'm sure you will learn a lot in 198)! I usually spend my time doing applied math research and volunteering in different clubs. Before quarantine, you probably will spot me at the swimming pool or at YiFang waiting for my boba on weekends. I look forward to seeing you all (online..) this spring and in person soon when we are back at school."
+        }
+    ]
+}

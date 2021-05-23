@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Data 88</title>
+    
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="../assets/javascript/underscore-min.js"></script>
+    <script src="../assets/javascript/jquery-3.5.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../assets/stylesheets/main.css" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+
+    <!-- MathJax script -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+
+    <!-- Staff Script -->
+    <script src="../assets/javascript/staff.js"></script>
+
+    <style>
+        p, h3 {
+            margin-bottom: 0;
+        }
+
+        #staff-target img {
+            border-radius: 50%;
+        }
+    </style>
+
+</head>
+
+<body id="index" class="home">
+
+    <script type="text/javascript" src="navbar.js"></script>
+
+    <div class="container">
+        
+        <h2>Staff</h2>
+
+        <p>Learn about the amazing people who put together this course!</p>
+
+        <div id="staff-target"></div>
+
+    </div>
+
+    <footer id="contentinfo" class="body"></footer>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        var jqxhr = loadStaff("./staff.json?nocache=" + (new Date()).getTime());
+    </script>
+
+</body>
+</html>

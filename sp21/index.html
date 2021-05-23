@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Data 198</title>
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="../assets/javascript/underscore-min.js"></script>
+    <script src="../assets/javascript/jquery-3.5.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../assets/stylesheets/main.css" />
+    <link rel="icon" href="../assets/images/favicon.ico" />
+
+    <!-- MathJax script -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"></script>
+
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+
+    <!-- Calendar Script -->
+    <script src="../assets/javascript/calendar.js"></script>
+
+</head>
+
+<body id="index" class="home">
+
+  <script type="text/javascript" src="navbar.js"></script>
+
+    <div class="container">
+
+        <h1 id="course-name">Data 198: Applied Data Science for Research and Discovery <span class="quiet font-weight-light">Spring 2021</span></h1>
+
+        <!-- <div class="alert alert-danger">This site is under construction. Please do not rely on the information presented until the first lecture as it may change drastically.</div> -->
+
+        <h2>Calendar</h2>
+
+        <p>
+            <strong>Facilitators</strong>: Grace Li (<a href="mailto:fqzbdkh@berkeley.edu">fqzbdkh@berkeley.edu</a>)<br>
+           Kyle Kishimoto (<a href="mailto:kylek@berkeley.edu">kylek@berkeley.edu</a>)<br> Varun Mittal (<a href="mailto:varunmittal@berkeley.edu">varunmittal@berkeley.edu</a>)<br><br>
+            <strong>Course Staff:</strong> Andrei Caprau, Hongli (Bob) Zhao, Ashley Zhang<br>
+            <strong>Lecture</strong>: Monday, 5 - 6 pm, <a href="https://berkeley.zoom.us/s/99208451434">Join Live Lecture Zoom </a><br> <!--(see <a href="https://piazza.com/class/kdhjudboby95c3?cid=8" target="_blank">@8</a> on Piazza)-->
+            <strong>Office Hours</strong>: Thursday, 4 - 5 pm; Friday, 9 - 10 pm, <a href="https://berkeley.zoom.us/j/93670758488">Join OH Zoom </a><br>
+            <strong>Lecture Recordings</strong>: See Resources Tab
+        </p>
+
+        <div class="calendar" id="calendar-target"></div>
+
+        <p style="text-align: right; padding-top: 5px;">Note: Topics and dates are subject to change.</p>
+
+    </div>
+
+    <script>
+    $(document).ready(function() {
+
+        // Announcements
+        var announcementIndex = 0;
+
+        function setAnnouncements(offset) {
+        var newIndex = announcementIndex  + offset;
+        var announcementNumber = $('.announcement').length;
+
+        if (newIndex < 0 || newIndex >= announcementNumber) {
+            return;
+        }
+
+        $('#announcement-' + announcementIndex).hide(0, function() {
+            $('#announcement-' + newIndex).show(0);
+        });
+
+        announcementIndex = newIndex;
+
+        if (announcementIndex >= announcementNumber - 1) {
+            $('#announcement-' + announcementIndex + ' .announcement-btn-older')
+            .addClass('disabled');
+        }
+        if (announcementIndex === 0) {
+            $('#announcement-' + announcementIndex + ' .announcement-btn-newer')
+            .addClass('disabled');
+        }
+        }
+        setAnnouncements(0);
+
+        $('.announcement-btn-newer > a').click(function() {
+        setAnnouncements(-1);
+        });
+        $('.announcement-btn-older > a').click(function() {
+        setAnnouncements(1);
+        });
+    });
+
+    </script>
+
+
+
+    <script>
+        // function below gets the calender JSON file; query params are added to ensure that the JSON
+        // file is never loaded from browser cache
+        var jqxhr = loadCalendar("./calendar.json?nocache=" + (new Date()).getTime());
+    </script>
+
+</body>
+</html>

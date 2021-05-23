@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+  font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h2:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+a.anchor-link {
+  display: none;
+}
+
+
+/* Calendar */
+
+table {
+  width: 100%;
+}
+
+.calendar table, .calendar th, .calendar tr, .calendar td {
+  border: 1px solid black;
+}
+
+.calendar th, .calendar tr, .calendar td {
+  padding: 12px;
+}
+
+.calendar td.header {
+  font-weight: 800;
+}
+
+.calendar tr.monday {
+  background-color: #e6e8f2;
+}
+
+.calendar .list-group .list-group-item {
+  border: none;
+  padding: .3rem .7rem;
+}
+
+/* Alternate row highlighting */
+
+.calendar tbody tr:nth-of-type(2n+1) {
+  background-color: #e6e8f2;
+}
+
+.calendar tbody tr:nth-of-type(2n+1) .list-group, 
+.calendar tbody tr:nth-of-type(2n+1) .list-group-item {
+  background-color: #e6e8f2;
+}
+
+/* .calendar .list-group.monday .list-group-item {
+  background-color: #e6e8f2;
+  border: none;
+} */
+
+.calendar tr.wednesday {
+  background-color: #f2f4f8;
+}
+
+.quiet {
+  color: #AAA;
+  /* opacity: ; */
+  font-style: italic;
+}
+
+h1#course-name {
+  padding-top: 20px;
+}
+
+h1#course-name span.quiet {
+  font-style: normal;
+  font-weight: lighter;
+  margin-left: 15px;
+}
+
+/* Staff */
+
+.staff th, .staff tr, .staff td {
+  padding: 30px 40px 40px 0;
+}
+
+.staff td {
+  vertical-align: top;
+  text-align: center;
+}
+
+.staff tr {
+  border:0;
+  border-top: 1px solid #eeeeee;
+}
+
+.biohover {
+  color:#377bb5;
+  text-decoration: underline
+}
+
+.staff .name .biohover .bio {
+  visibility: hidden;
+  width: 200px;
+  background-color: #e7e7e7;
+  color: #000;
+  text-align: left;
+  border-radius: 5px;
+  padding: 5px 5px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+
+.staff .name .biohover:hover .bio {
+  visibility: visible;
+}
+
+.staff .name .biohover:active .bio {
+  visibility: visible;
+}
